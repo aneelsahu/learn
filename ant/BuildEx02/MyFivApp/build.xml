@@ -1,0 +1,30 @@
+<project>
+	<taskdef name="deploy"    classname="org.apache.catalina.ant.DeployTask"/>
+
+    <target name="clean">
+        <delete dir="WEB-INF/classes"/>
+		<delete dir="*.war"/>
+    </target>
+	
+    <target name="compile">
+        <mkdir dir="WEB-INF/classes"/>
+        <javac srcdir="src" destdir="WEB-INF/classes"/>
+    </target>
+
+	<target name="war" depends="clean,compile">		
+		<war destfile="MyFivApp.war" webxml="WEB-INF/web.xml">
+			 <fileset file="index.html"/>		
+			 <classes dir="WEB-INF/classes"/>			
+		</war>	
+	</target>
+	<!-- Not working --> 
+	<!--target name="deploy" depends="war">
+		<deploy url="http://localhost:8080/manager/html"
+			username="tomcat"
+			password="tomcat"
+			path="/MyFivApp"
+			update="true"
+			localWar="MyFivApp.war" />
+	</target-->
+	
+</project>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+   version="2.5"> 
+   <servlet>
+        <servlet-name>PageOneConn</servlet-name>
+        <servlet-class>POne</servlet-class>
+    </servlet>
+
+	 <servlet-mapping>
+        <servlet-name>PageOneConn</servlet-name>
+        <url-pattern>/PG1</url-pattern>
+    </servlet-mapping>
+   
+	<servlet>
+        <servlet-name>PageTwoConn</servlet-name>
+        <servlet-class>PTwo</servlet-class>
+    </servlet>
+	
+    <servlet-mapping>
+        <servlet-name>PageTwoConn</servlet-name>
+        <url-pattern>/PG2</url-pattern>
+    </servlet-mapping>
+   
+
+   
+
+
+</web-app>
