@@ -1,1 +1,11 @@
-sdafasdasdasd
+To get 
+-- To Checkin the file to GIT Version Controlling system
+git status
+git add <FileName>  Exmaple git add * 
+git commit -m 'Your comment here'
+git push
+
+-- To Checkout the source code from  GIT 
+
+TODO---git clone URL ---First time we use this command ---TODO.. 
+git pull

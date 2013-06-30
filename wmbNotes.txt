@@ -1,0 +1,20 @@
+WMB Notes
+
+Step 1 : Create a QManager names "Jai_QManager" using MQExplorer
+Step 2 : Open the WMB Console and enter the following commands
+Step 3 : MQSICREATECONFIGMGR JAI_CONFIG_MANAGER -i xxx- a xxx -q JAI_QMANAGER
+Step 4 : MQSICREATEDB JAIDB -i xxx -a xxx -e DB2
+sTEP 5 : MQSICREATEBROKER JAIBROKER -i xxx -a xxx -q JAI_QMANAGER -n JAIDB
+sTEP 6 : MQSISTART JAI_CONFIG_MANAGER
+sTEP 7 : MQSISTART JAIBROKER
+sTEP 8 : Open toolkit and create new domain by adding the QM name
+sTEP 9 : Then add the broker
+sTEP 10: Wait for some time to get it deployed.
+
+WBRK61_DEFAULT_CONFIGURATION_MANAGER
+DEFBKD61
+WBRK61_DEFAULT_BROKER
+WBRK61_DEFAULT_QUEUE_MANAGER
+MQSICREATECONFIGMGR WBRK61_DEFAULT_CONFIGURATION_MANAGER -i xxx -a xxx$123 -q WBRK61_DEFAULT_QUEUE_MANAGER
+MQSICREATEDB DEFBKD61 -i xxx -a xxxx$123 -e DB2
+MQSICREATEBROKER JAI_BROKER -i xxx -a xxx$123 -q JAI_BROKER_QUEUE_MANAGER -nTXWIP -uxxx -p xxxx$123
